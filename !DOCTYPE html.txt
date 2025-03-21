@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Scorecard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="scoreboard">
+        <h1>Cricket Scorecard</h1>
+        <h2 id="teamName">Team A</h2>
+        <p>Runs: <span id="runs">0</span></p>
+        <p>Wickets: <span id="wickets">0</span></p>
+        <p>Overs: <span id="overs">0</span></p>
+        <p>Current Over: <span id="currentOver">0.0</span></p>
+        
+        <h3>Ball-by-Ball Tracker</h3>
+        <div id="ballTracker"></div>
+        
+        <button onclick="addBall(0)">Dot Ball</button>
+        <button onclick="addBall(1)">1 Run</button>
+        <button onclick="addBall(2)">2 Runs</button>
+        <button onclick="addBall(4)">4 Runs</button>
+        <button onclick="addBall(6)">6 Runs</button>
+        <button onclick="addWicket()">Wicket</button>
+        
+        <h3>Export Options</h3>
+        <button onclick="exportCSV()">Download CSV</button>
+        <button onclick="copyScore()">Copy to Clipboard</button>
+        <p id="copyMessage" style="color: green;"></p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
